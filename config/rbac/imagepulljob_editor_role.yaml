@@ -1,0 +1,24 @@
+# permissions for end users to edit imagepulljobs.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: imagepulljob-editor-role
+rules:
+- apiGroups:
+  - job.wuxs.vip
+  resources:
+  - imagepulljobs
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - job.wuxs.vip
+  resources:
+  - imagepulljobs/status
+  verbs:
+  - get

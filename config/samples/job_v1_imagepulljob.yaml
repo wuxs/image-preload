@@ -1,0 +1,11 @@
+apiVersion: job.wuxs.vip/v1
+kind: ImagePullJob
+metadata:
+  name: imagepulljob-1
+spec:
+  selector:
+    matchLabels:
+      location: edge
+  images:
+    - wuxs/wechat:latest
+    - wuxs/node-pool-webhook:v0.2.1

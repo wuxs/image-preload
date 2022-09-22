@@ -1,0 +1,15 @@
+domain: wuxs.vip
+layout:
+- go.kubebuilder.io/v3
+projectName: image-preload
+repo: github.com/wuxs/image-preload
+resources:
+- api:
+    crdVersion: v1
+  controller: true
+  domain: wuxs.vip
+  group: job
+  kind: ImagePullJob
+  path: github.com/wuxs/image-preload/api/v1
+  version: v1
+version: "3"
